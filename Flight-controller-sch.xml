@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:/Users/amir_/Documents/GitHub/Projects/Flight-controller-sch/Flight-controller-sch.sch</source>
+    <date>27/05/2016 2:17:56 AM</date>
+    <tool>Eeschema 4.0.1-stable</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Flight-controller-sch.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/power-distribution/" tstamps="/574734FD/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>power-distribution.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="D1">
+      <value>Diode_Bridge</value>
+      <libsource lib="device" part="Diode_Bridge"/>
+      <sheetpath names="/power-distribution/" tstamps="/574734FD/"/>
+      <tstamp>5747365C</tstamp>
+    </comp>
+    <comp ref="F1">
+      <value>FUSE</value>
+      <libsource lib="device" part="FUSE"/>
+      <sheetpath names="/power-distribution/" tstamps="/574734FD/"/>
+      <tstamp>5747376F</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>LM7809ACT</value>
+      <footprint>TO-220</footprint>
+      <libsource lib="regul" part="LM7809ACT"/>
+      <sheetpath names="/power-distribution/" tstamps="/574734FD/"/>
+      <tstamp>574737CE</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>LM7805CT</value>
+      <footprint>TO-220</footprint>
+      <libsource lib="regul" part="LM7805CT"/>
+      <sheetpath names="/power-distribution/" tstamps="/574734FD/"/>
+      <tstamp>5747383F</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>CP</value>
+      <libsource lib="device" part="CP"/>
+      <sheetpath names="/power-distribution/" tstamps="/574734FD/"/>
+      <tstamp>574738B4</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>CP</value>
+      <libsource lib="device" part="CP"/>
+      <sheetpath names="/power-distribution/" tstamps="/574734FD/"/>
+      <tstamp>57473A4F</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>CP</value>
+      <libsource lib="device" part="CP"/>
+      <sheetpath names="/power-distribution/" tstamps="/574734FD/"/>
+      <tstamp>57473C8C</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>CP</value>
+      <libsource lib="device" part="CP"/>
+      <sheetpath names="/power-distribution/" tstamps="/574734FD/"/>
+      <tstamp>57473CCF</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="device" part="CP">
+      <description>Polarised capacitor</description>
+      <footprints>
+        <fp>CP*</fp>
+        <fp>Elko*</fp>
+        <fp>TantalC*</fp>
+        <fp>C*elec</fp>
+        <fp>c_elec*</fp>
+        <fp>SMD*_Pol</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Diode_Bridge">
+      <description>Diode bridge</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">Diode_Bridge</field>
+      </fields>
+      <pins>
+        <pin num="1" name="-" type="input"/>
+        <pin num="2" name="~" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="FUSE">
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">FUSE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="regul" part="LM7805CT">
+      <aliases>
+        <alias>LM7806CT</alias>
+        <alias>LM7808CT</alias>
+        <alias>LM7809CT</alias>
+        <alias>LM7810CT</alias>
+        <alias>LM7812CT</alias>
+        <alias>LM7815CT</alias>
+        <alias>LM7818CT</alias>
+        <alias>LM7824CT</alias>
+        <alias>LM7806ACT</alias>
+        <alias>LM7808ACT</alias>
+        <alias>LM7809ACT</alias>
+        <alias>LM7810ACT</alias>
+        <alias>LM7812ACT</alias>
+        <alias>LM7815ACT</alias>
+        <alias>LM7818ACT</alias>
+        <alias>LM7824ACT</alias>
+      </aliases>
+      <description>Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220</description>
+      <docs>http://www.fairchildsemi.com/ds/LM/LM7805.pdf</docs>
+      <footprints>
+        <fp>TO*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM7805CT</field>
+        <field name="Footprint">TO-220</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="input"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="device">
+      <uri>C:\Program Files (x86)\KiCad\share\kicad\library\device.lib</uri>
+    </library>
+    <library logical="regul">
+      <uri>C:\Program Files (x86)\KiCad\share\kicad\library\regul.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/power-distribution/+9V">
+      <node ref="U1" pin="3"/>
+      <node ref="C4" pin="1"/>
+    </net>
+    <net code="2" name="/power-distribution/+5V">
+      <node ref="U2" pin="3"/>
+      <node ref="C3" pin="1"/>
+    </net>
+    <net code="3" name="GND">
+      <node ref="C4" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="U2" pin="2"/>
+      <node ref="C3" pin="2"/>
+      <node ref="U1" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="D1" pin="2"/>
+      <node ref="D1" pin="1"/>
+    </net>
+    <net code="4" name="+12V">
+      <node ref="D1" pin="4"/>
+    </net>
+    <net code="5" name="Net-(D1-Pad3)">
+      <node ref="D1" pin="3"/>
+      <node ref="F1" pin="1"/>
+    </net>
+    <net code="6" name="Net-(C1-Pad1)">
+      <node ref="U1" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="U2" pin="1"/>
+      <node ref="F1" pin="2"/>
+    </net>
+  </nets>
+</export>
